@@ -19,10 +19,10 @@ app.use(cors());
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 
-//mongoose.connect("mongodb+srv://solange:882003@cluster0.6lmwx.mongodb.net/e-commerce?retryWrites=true&w=majority&appName=Cluster0");
+
 // Connexion sécurisée
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connecté ✅'))
+  .then(() => console.log('MongoDB connecté '))
   .catch(err => console.error('Erreur MongoDB:', err));
 
 //API Creation
