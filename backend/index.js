@@ -21,9 +21,31 @@ const PORT = process.env.PORT || 4000;
 
 
 // Connexion sécurisée
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('MongoDB connecté '))
-  .catch(err => console.error('Erreur MongoDB:', err));
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(async () => {
+    console.log("Connexion à MongoDB réussie");
+
+    // Mise à jour des URLs d'images
+    await Product.updateMany(
+        {},
+        [{ 
+            $set: { 
+                image: { 
+                    $replaceOne: { 
+                        input: "$image", 
+                        find: "http://localhost:4000", 
+                        replacement: "https://ecommerce1-backend-wj82.onrender.com" 
+                    } 
+                } 
+            } 
+        }]
+    );
+
+    console.log("Mise à jour des URLs des images terminée !");
+    mongoose.connection.close();
+}).catch(err => console.error(err));
 
 //API Creation
 
@@ -132,6 +154,7 @@ app.post('/removeproduct',async (req,res)=>{
 app.get('/allproducts',async (req,res)=>{
     let products = await Product.find({});
     console.log("Tous les produits recuperes");
+    
     res.send(products);
 })
 //POURADMIN FIN
