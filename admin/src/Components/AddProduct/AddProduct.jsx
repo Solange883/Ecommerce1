@@ -3,7 +3,7 @@ import './AddProduct.css'
 import telecharger_icon from '../../assets/telecharger_icon.svg'
 
 const AddProduct = () => {
-  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
+  const API_URL = "https://ecommerce1-backend-wj82.onrender.com";
 
   const [image,setImage] = useState(false);
   const imageHandler = (e) =>{

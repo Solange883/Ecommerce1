@@ -5,7 +5,7 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 
 
 export const Panieritems = () => {
-  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
+  const API_URL = "https://ecommerce1-backend-wj82.onrender.com";
   const {tous_les_produits,panierItems,removeFromPanier,getTotalMontantPanier}=useContext(ShopContext);
 
   const enregistrerCommande = async () => {

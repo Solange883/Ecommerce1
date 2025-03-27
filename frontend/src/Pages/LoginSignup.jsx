@@ -3,7 +3,7 @@ import  './CSS/LoginSignup.css'
 
 
 export const LoginSignup = () => {
-  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
+  const API_URL = "https://ecommerce1-backend-wj82.onrender.com";
   const [state,setState] = useState("Inscription");
   const [formData,setFormData] = useState({
     username:"",

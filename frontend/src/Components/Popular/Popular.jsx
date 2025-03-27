@@ -5,7 +5,7 @@ import { Item } from '../Item/Item'
 
 
 export const Popular = () => {
-  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
+  const API_URL = "https://ecommerce1-backend-wj82.onrender.com";
    const [data_product,setDataProduct]=useState([])
   
     useEffect(()=>{
