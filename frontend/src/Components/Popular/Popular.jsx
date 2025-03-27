@@ -5,11 +5,11 @@ import { Item } from '../Item/Item'
 
 
 export const Popular = () => {
-
+  const API_URL = "http://localhost:4000";
    const [data_product,setDataProduct]=useState([])
   
     useEffect(()=>{
-      fetch('http://localhost:4000/popularinwomen')
+      fetch(`${API_URL}/popularinwomen`)
       .then((response)=>response.json())
       .then((data)=>setDataProduct(data))
     },[])
