@@ -14,17 +14,18 @@ const getDefaultPanier =()=>{
 
 
 export const ShopContextProvider  = (props) => {
+  const API_URL = "http://localhost:4000";
   const [panierItems,setPanierItems] = useState(getDefaultPanier());
   const [tous_les_produits,setTousLesProduits] = useState([]);
   
   useEffect(()=>{
-    fetch('http://localhost:4000/allproducts')
+    fetch(`${API_URL}/allproducts`)
     .then((response)=>response.json())
     .then((data)=>setTousLesProduits(data))
 
 
     if(localStorage.getItem('auth-token')){
-      fetch('http://localhost:4000/getPanier',{
+      fetch(`${API_URL}/getPanier`,{
         method:'POST',
         headers:{
           ACCEPT:'application/form-data',
@@ -42,7 +43,7 @@ export const ShopContextProvider  = (props) => {
     setPanierItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
 
     if(localStorage.getItem('auth-token')){
-      fetch('http://localhost:4000/ajouteraupanier',{
+      fetch(`${API_URL}/ajouteraupanier`,{
         method:'POST',
         headers:{
           ACCEPT:'application/form-data',
@@ -60,7 +61,7 @@ export const ShopContextProvider  = (props) => {
     setPanierItems((prev)=>({...prev,[itemId]:prev[itemId]-1}) )
 
     if(localStorage.getItem('auth-token')){
-      fetch('http://localhost:4000/supprimerdupanier',{
+      fetch(`${API_URL}/supprimerdupanier`,{
         method:'POST',
         headers:{
           ACCEPT:'application/form-data',

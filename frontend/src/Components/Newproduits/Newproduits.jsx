@@ -4,10 +4,11 @@ import new_produits from '../Assets/new_produits'
 import { Item } from '../Item/Item'
 
 export const Newproduits = () => {
+  const API_URL = "http://localhost:4000";
   const [new_produits,setNewProduits]=useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:4000/newProduits')
+    fetch(`${API_URL}/newProduits`)
     .then((response)=>response.json())
     .then((data)=>setNewProduits(data))
   },[])

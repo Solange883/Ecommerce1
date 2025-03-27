@@ -3,17 +3,17 @@ import "./ListeProduits.css"
 import cross_icon from '../../assets/cross_icon.png';
 
 const ListeProduits = () => {
-  
+  const API_URL = "http://localhost:4000";
   const [tous_les_produits,setTousLesProduits]=useState([])
 
   const recupererInfo = async ()=>{
-    await fetch('http://localhost:4000/allproducts')
+    await fetch(`${API_URL}/allproducts`)
     .then((res)=>res.json())
     .then((data)=>{setTousLesProduits(data)});
   }
 
   const supprimerProduit= async (id)=>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch(`${API_URL}/removeproduct`,{
       method:'POST',
       headers:{
         Accept:'application/json',  //Le client attend une réponse JSON.

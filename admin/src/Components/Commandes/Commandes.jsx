@@ -3,9 +3,9 @@ import "./Commandes.css"
 
 const Commandes = () => {
     const [commandes, setCommandes] = useState([]);
-
+    const API_URL = "http://localhost:4000";
     useEffect(() => {
-        fetch('http://localhost:4000/getAllCommandes')
+        fetch(`${API_URL}/getAllCommandes`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Erreur réseau lors du chargement des commandes');

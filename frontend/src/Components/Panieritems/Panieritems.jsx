@@ -5,6 +5,7 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 
 
 export const Panieritems = () => {
+  const API_URL = "http://localhost:4000";
   const {tous_les_produits,panierItems,removeFromPanier,getTotalMontantPanier}=useContext(ShopContext);
 
   const enregistrerCommande = async () => {
@@ -23,7 +24,7 @@ export const Panieritems = () => {
   
     const totalPrice = getTotalMontantPanier(); // Calcul du total
 
-    const response = await fetch('http://localhost:4000/ajoutercommande', {
+    const response = await fetch(`${API_URL}/ajoutercommande`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ import  './CSS/LoginSignup.css'
 
 
 export const LoginSignup = () => {
-
+  const API_URL = "http://localhost:4000";
   const [state,setState] = useState("Inscription");
   const [formData,setFormData] = useState({
     username:"",
@@ -18,7 +18,7 @@ export const LoginSignup = () => {
   const sinscrire = async () =>{
     console.log("Inscription executée",formData);
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch(`${API_URL}/signup`,{
       method:'POST',
       headers:{
         Accept:'application/json',  //Le client attend une réponse JSON.
@@ -39,7 +39,7 @@ export const LoginSignup = () => {
   const seconnecter = async () =>{
     console.log("Connexion executée",formData);
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch(`${API_URL}/login`,{
       method:'POST',
       headers:{
         Accept:'application/json',  //Le client attend une réponse JSON.

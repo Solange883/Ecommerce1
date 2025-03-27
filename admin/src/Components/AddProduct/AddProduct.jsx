@@ -3,6 +3,7 @@ import './AddProduct.css'
 import telecharger_icon from '../../assets/telecharger_icon.svg'
 
 const AddProduct = () => {
+  const API_URL = "http://localhost:4000";
 
   const [image,setImage] = useState(false);
   const imageHandler = (e) =>{
@@ -25,13 +26,14 @@ const AddProduct = () => {
     let responseData;
     let product = productDetails;
 
-    let formData = new FormData();
+    let formData = new FormData()
     formData.append('product',image);
 
-    await fetch('http://localhost:4000/upload',{
+    await fetch(`${API_URL}/upload`,{
       method:'POST',
       headers:{
         Accept:'application/json',
+        
       },
       body:formData,
     }).then((resp) => resp.json()).then((data)=>{responseData=data});
@@ -41,7 +43,7 @@ const AddProduct = () => {
       product.image = responseData.image_url;
       console.log(product);
 
-      await fetch('http://localhost:4000/addproduct',{
+      await fetch(`${API_URL}/addproduct`,{
         method:'POST',
         headers:{
           Accept:'application/json',  //Le client attend une réponse JSON.
