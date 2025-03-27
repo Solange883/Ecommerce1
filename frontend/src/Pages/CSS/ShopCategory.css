@@ -1,0 +1,101 @@
+.shop-category{
+    margin-top: 80px;
+}
+.texte{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin-right: 50px;
+    
+}
+.texte  img{
+    margin-top: 30px;
+    width: 300px;
+    height: auto;
+}
+.texte p {
+    font-size: 20px;
+    padding: 90px;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+
+.shopcategory-banner{
+    display:block;
+    width: 82%;
+    margin: 30px auto;
+}
+
+.shopcategory-indextri{
+     display: flex;
+     margin: 2px 170px;
+     justify-content: space-between;
+     align-items: center;
+}
+.shopcategory-tri{
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+    margin-left: 200px;
+
+}
+.shopcategory-tri img{
+    width: 15px;
+    height:7px ;
+}
+.shopcategory-indextri p {
+    font-size: 14px;
+}
+.shopcategory-indextri p span{
+    font-size: 13px;
+    font-weight: 600;
+}
+.shopcategory-produits{
+    margin: 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 80px;
+}
+.shopcategory-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+@media(max-width:1100px){
+    .shopcategory-produits{
+        margin: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 50px;
+        column-gap: 20px;
+    }
+}
+@media(max-width:900px){
+    .texte p {
+        font-size: 10px;
+        padding: 90px;
+        margin-left: 2px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+    .shopcategory-produits{
+        padding-right: 30px;
+        margin: 20px 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 50px;
+        column-gap: 10px;
+    }
+}

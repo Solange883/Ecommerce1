@@ -1,0 +1,19 @@
+.chemin{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;;
+    margin: 83px 170px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.chemin img{
+    width: 6px;
+}
+
+@media(max-width:800px){ 
+  .chemin{ 
+    margin-left: 50px;
+    align-items:center;
+   }
+}

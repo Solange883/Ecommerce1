@@ -1,0 +1,176 @@
+.panieritems{
+    margin: 140px 170px;
+}
+.panieritems hr{
+    height: 3px;
+    background-color: #e2e2e2;
+    border: none;
+    width: 915px;
+}
+.panieritems-format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 0.7fr 1fr 1fr;
+    align-items: center;
+    align-items: center;
+    gap:75px;
+    padding: 13px 0px;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 600;
+}
+.panieritems-format{
+    font-size: 14px;
+    font-weight: 500;
+}
+.paniericon-produit{
+    height: 55px;
+    width:auto ;
+}
+.paniericon-remove{
+    width:15px;
+    margin: 0 40px;
+}
+.panieritems-quantite{
+    width: 44px;
+    height: 30px;
+    border: 2px solid #ebebeb;
+    background-color: #fff;
+}
+
+.panieritems-down{
+    display: flex;
+    margin: 70px 0px;
+}
+.panieritems-total{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right:250px;
+    gap:20px;
+}
+.panieritems-total h1{
+    font-size: 22px;
+}
+.panieritems-total hr{
+    width: 450px;
+}
+.panieritems-total-item{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+.panieritems-total button{
+    width: 230px;
+    height: 45px;
+    outline: none;
+    border: none;
+    background: #fd6c9f;
+    color:#fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.panieritems-codepromo{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 320px;
+}
+.panieritems-codepromo p{
+    color:#555;
+    margin-right:60px ;
+   
+}
+.panieritems-champpromo{
+    width: 400px;
+    margin-top: 15px;
+    height: 10px;
+}
+.panieritems-champpromo input{
+    border: none;
+    outline: none;
+    background: #cacaca;
+    font-size: 16px;
+    width: 230px;
+    height: 40px;
+}
+.panieritems-champpromo button{
+    width:120px;
+    height: 42px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width:1200px){
+    .panieritems{
+        margin: 60px 50px;
+    }
+    .panieritems hr{
+        width: 380px;
+    }
+    .panieritems-format-main{
+        grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: 20px;
+        padding: 15px 0px;
+        font-size: 15px;
+    }
+    .paniericon-produit{
+        height: 50px;
+    }
+    .paniericon-remove{
+        height: 10px;
+        width: auto;
+    }
+    .panieritems-quantite{
+        width: 40px;
+        height: 30px;
+    }
+
+    .panieritems-down{
+        margin: 80px 0px;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .panieritems-total{
+        margin: 0;
+    }
+    .panieritems-total-item{
+        width: 390px;
+    }
+    .panieritems-total hr{
+        width: 400px;
+    }
+    .panieritems-total button{
+        max-width: 200px;
+        height: 45px;
+        font-size: 13px;
+    }
+    .panieritems-codepromo{
+        width: auto;
+        max-width: 500px;
+    }
+    .panieritems-codepromo p{
+        width: 300px;
+    }
+    .panieritems-champpromo{
+        width: 100%;
+        display: flex;
+    } 
+    .panieritems-champpromo button{
+        width: 120px;
+      
+    }
+}
+
+@media(max-width:500px){
+    .panieritems-format-main{
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+        gap: 10px;
+    }
+    .panieritems-format{
+        display: grid;
+    }
+}

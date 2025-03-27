@@ -1,0 +1,66 @@
+.contact{
+    width:65%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 80px 110px;
+    margin-bottom: 80px;
+    background: linear-gradient(180deg, #fde1ff 0%,#e1ffea22 60%);
+    gap:30px;
+}
+.contact h1{
+    color: #454545;
+    font-size: 30px;
+    font-weight: 600;
+}
+.contact p{
+    color: #454545;
+    font-size: 15px;
+} 
+
+.contact div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 730px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid #e3e3e395;
+}
+
+.contact input{
+    width: 600px;
+    margin-left: 30; 
+    border: none;
+    outline: none;
+    color: #616161;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.contact div button{
+    width: 210px;
+    height: 70px;
+    background-color: #fd6c9f;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+@media(max-width:1100px){
+    .contact{
+        margin-top: 130px;
+    }
+}
+@media(max-width:900px){
+    .contact{
+        margin-top: 280px;
+    }
+}

@@ -1,0 +1,36 @@
+.produitssimilaires{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100vh;
+    margin-top: 0px;
+}
+.produitssimilaires h1{
+    color:#171717;
+    font-size: 30px;
+    font-weight: 700;
+}
+.produitssimilaires hr{
+    width:200px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #252525;
+}
+.produitssimilaires-item{
+    margin-top: 30px;
+    display: flex;
+}
+
+@media(max-width:800px){
+    .produitssimilaires{
+        margin-right: 50px;
+    }
+    .produitssimilaires h1{
+        font-size: 25px;
+    }
+    .produitssimilaires-item{
+        display: grid;
+        grid-template-columns: repeat(2,0.5fr);
+    }
+}

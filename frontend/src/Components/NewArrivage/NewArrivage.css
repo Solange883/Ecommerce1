@@ -1,0 +1,101 @@
+
+.newArrivage{
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    position: relative;
+ 
+}
+
+.new-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    padding-left: 230px;
+    line-height:1.1 ;
+}
+.new-left h2{
+    color:black;
+    font-size: 26px;
+    font-weight: 400;
+    margin-right: 590px;
+}
+
+.info p {
+    margin-right: 610px;
+    margin-top: 15px;
+    color:black;
+    font-size: 25px;
+    font-weight: 700;
+}
+.info h4{
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    margin-right: 730px;
+   
+}
+
+
+.hand_icon{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+.hand_icon p{
+    color:black;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 3px;
+}
+.hand_icon img{
+    width: 50px;
+}
+
+.icon2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 330px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #fd6c9f;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.icon2 p{
+    color:black;
+    font-size: 25px;
+    font-weight: 700;
+}
+.icon2 img{
+    width: 30px;
+   
+}
+.new-right{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.new-right img{
+    width: 380px;
+    height: auto;
+    margin-bottom: 80px;
+    
+    margin-left:-300px ;
+   
+}
+
+
+
+
+
+
+
