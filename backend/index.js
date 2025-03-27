@@ -42,10 +42,12 @@ const storage= multer.diskStorage({
 const upload = multer({storage:storage})
 //création d'un point de terminaison de téléchargement pour les images
 app.use('/images',express.static('upload/images'))
+const API_URL="https://ecommerce1-backend-wj82.onrender.com"
 app.post('/upload',upload.single('product'),(req,res)=>{
     res.json({
         success:1,
-        image_url:`http://localhost:${PORT}/images/${req.file.filename}`
+        //image_url:`http://localhost:${PORT}/images/${req.file.filename}`
+        image_url:`http://localhost:${API_URL}/images/${req.file.filename}`
     })
 })
 
