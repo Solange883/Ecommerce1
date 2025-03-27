@@ -4,7 +4,7 @@ import new_produits from '../Assets/new_produits'
 import { Item } from '../Item/Item'
 
 export const Newproduits = () => {
-  const API_URL = "http://localhost:4000";
+  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
   const [new_produits,setNewProduits]=useState([])
 
   useEffect(()=>{
