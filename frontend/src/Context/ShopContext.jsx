@@ -14,7 +14,7 @@ const getDefaultPanier =()=>{
 
 
 export const ShopContextProvider  = (props) => {
-  const API_URL = "http://localhost:4000";
+  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
   const [panierItems,setPanierItems] = useState(getDefaultPanier());
   const [tous_les_produits,setTousLesProduits] = useState([]);
   

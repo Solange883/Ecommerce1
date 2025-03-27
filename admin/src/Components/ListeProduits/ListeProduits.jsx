@@ -3,7 +3,7 @@ import "./ListeProduits.css"
 import cross_icon from '../../assets/cross_icon.png';
 
 const ListeProduits = () => {
-  const API_URL = "http://localhost:4000";
+  const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
   const [tous_les_produits,setTousLesProduits]=useState([])
 
   const recupererInfo = async ()=>{

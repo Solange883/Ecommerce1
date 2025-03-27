@@ -3,7 +3,7 @@ import "./Commandes.css"
 
 const Commandes = () => {
     const [commandes, setCommandes] = useState([]);
-    const API_URL = "http://localhost:4000";
+    const API_URL = "https://ecommerce1-backend-l29n.onrender.com";
     useEffect(() => {
         fetch(`${API_URL}/getAllCommandes`)
             .then(response => {
